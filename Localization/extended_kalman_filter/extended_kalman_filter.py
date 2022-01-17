@@ -159,9 +159,15 @@ def plot_covariance_ellipse(xEst, PEst):  # pragma: no cover
 def main():
     print(__file__ + " start!!")
 
+    print("Matrix Q: \n", Q) # 𝑄 is covariance matrix of process noise,
+    print("Matrix R: \n", R) # 𝑅 is covariance matrix of observation noise at time �
+    
     time = 0.0
 
     # State Vector [x y yaw v]'
+    # x,y => position
+    # yaw => orientation
+    # v => velocity
     xEst = np.zeros((4, 1))
     xTrue = np.zeros((4, 1))
     PEst = np.eye(4)
